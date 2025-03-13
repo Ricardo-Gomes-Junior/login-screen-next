@@ -8,15 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { DialogHeader } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-  DialogTrigger,
-} from "@radix-ui/react-dialog";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Label } from "@radix-ui/react-label";
 import * as React from "react";
@@ -109,23 +101,11 @@ export default function Home() {
                 placeholder="Insira sua Senha"
               />
             </div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="mt-4 w-full bg-[#9973FB] hover:bg-[#8262D6]">
-                  Entrar
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold tracking-tighter">
-                    Ops...
-                  </DialogTitle>
-                  <DialogDescription>
-                    Ainda estamos em faze de construção!
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
+            <Button
+              className="mt-4 w-full bg-[#9973FB] hover:bg-[#8262D6]"
+            >
+              Entrar
+            </Button>
             <Button variant="outline" className="mt-4 w-full">
               <GitHubLogoIcon className="mr-2" />
               Entrar com o GitHub
