@@ -31,6 +31,14 @@ import driver1 from "./assets/City driver-bro.svg";
 import driver2 from "./assets/sports car-bro.svg";
 import driver3 from "./assets/Vehicle Sale-bro.svg";
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -101,11 +109,22 @@ export default function Home() {
                 placeholder="Insira sua Senha"
               />
             </div>
-            <Button
-              className="mt-4 w-full bg-[#9973FB] hover:bg-[#8262D6]"
-            >
-              Entrar
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="mt-4 w-full bg-[#9973FB] hover:bg-[#8262D6]">
+                  Entrar
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold tracking-tighter">Ops...</DialogTitle>
+                </DialogHeader>
+                <DialogDescription>
+                  Pagina em desenvolvimento
+                </DialogDescription>
+              </DialogContent>
+            </Dialog>
+
             <Button variant="outline" className="mt-4 w-full">
               <GitHubLogoIcon className="mr-2" />
               Entrar com o GitHub
